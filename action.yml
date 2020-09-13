@@ -1,0 +1,19 @@
+name: 'Convert version string to NuGet format'
+author: 'Sander Saares'
+description: 'Takes a version string and ensures it is in NuGet compatible format.'
+inputs:
+  versionstring:
+    description: 'The original version string.'
+    required: true
+  releaseType:
+    description: 'One of `stable`, `prerelease` or `continuous`'
+    required: true
+outputs:
+  nugetVersionstring:
+    description: 'The version string in NuGet format'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'crosshair'
+  color: 'red'
